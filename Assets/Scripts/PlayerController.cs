@@ -31,8 +31,9 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
         if (Input.GetKeyDown(KeyCode.Space)) 
-        { 
+        {
             // Launch a projecticle from player
+            Instantiate(projecticlePrefab, transform.position, projecticlePrefab.transform.rotation);
         }
 
     }
